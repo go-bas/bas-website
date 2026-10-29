@@ -1,0 +1,3 @@
+# Plain HTML site: no build command, Netlify serves the site/ folder as-is.
+[build]
+  publish = "site"
