@@ -4,7 +4,11 @@ Plain HTML/CSS/JS with three small Netlify functions. No build step, nothing to 
 
 ```
 site/                    ← the website (what gets published)
-  index.html               homepage: services, savings calculator, pricing, booking form
+  index.html               homepage: a short introduction pointing to the pages below
+  services.html            all services (each also has its own page in services/)
+  savings.html             savings calculator
+  pricing.html             plans and single-service prices
+  contact.html             booking form (Netlify Forms; also sent to the YPS CRM)
   start.html               choose a plan, then pay through Stripe
   welcome.html             shown after a client pays
   thanks.html              shown after the booking form is sent

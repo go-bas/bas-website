@@ -18,6 +18,27 @@ if (toggle && nav) {
   });
 }
 
+// Services drop-down: the arrow opens it (touch, keyboard and the phone menu)
+document.querySelectorAll('.nav-group').forEach((group) => {
+  const button = group.querySelector('.nav-sub-toggle');
+  if (!button) return;
+  const setOpen = (open) => {
+    group.classList.toggle('open', open);
+    button.setAttribute('aria-expanded', String(open));
+  };
+  button.addEventListener('click', (e) => {
+    e.stopPropagation();
+    setOpen(!group.classList.contains('open'));
+  });
+  document.addEventListener('click', (e) => { if (!group.contains(e.target)) setOpen(false); });
+  group.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && group.classList.contains('open')) {
+      setOpen(false);
+      button.focus();
+    }
+  });
+});
+
 // Preselect the "What would you automate first?" option from ?interest=… (used by service page links)
 const interest = new URLSearchParams(location.search).get('interest');
 const interestSelect = document.getElementById('f-need');

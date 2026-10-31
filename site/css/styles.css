@@ -362,3 +362,42 @@ section { scroll-margin-top: 80px; }
 .next-steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 12px; font-size: 1.05rem; color: var(--body-strong); }
 @media (max-width: 640px) { .summary .btn { margin-left: 0; width: 100%; } }
 .stack-lg { display: flex; flex-direction: column; gap: 28px; }
+
+/* Top menu: current page and the Services drop-down */
+.nav a[aria-current="page"]:not(.btn) { color: var(--teal-text); font-weight: 600; }
+.nav-group { position: relative; display: flex; align-items: center; gap: 2px; }
+.nav-sub-toggle {
+  display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px;
+  border: 0; border-radius: 8px; background: transparent; color: var(--body-strong); cursor: pointer;
+}
+.nav-sub-toggle:hover { background: var(--cloud); }
+.nav-sub-toggle svg { transition: transform .15s ease; }
+.nav-group.open .nav-sub-toggle svg { transform: rotate(180deg); }
+.nav-sub { display: none; flex-direction: column; }
+.nav .nav-sub a:not(.btn) { padding: 10px 12px; border-radius: 8px; font-size: 0.95rem; }
+.nav .nav-sub a:not(.btn):hover { background: var(--cloud); }
+.nav .nav-sub .nav-sub-all { border-top: 1px solid var(--line); border-radius: 0 0 8px 8px; margin-top: 4px; padding-top: 12px; color: var(--teal-text); font-weight: 600; }
+.nav-group.open .nav-sub { display: flex; }
+@media (min-width: 1081px) {
+  .nav-group { padding: 22px 0; }
+  .nav-sub {
+    position: absolute; top: 100%; left: -16px; min-width: 280px; z-index: 60;
+    background: var(--white); border: 1px solid var(--line); border-radius: 14px;
+    box-shadow: 0 16px 40px rgba(14, 26, 43, 0.14); padding: 8px;
+  }
+  .nav-group:hover .nav-sub, .nav-group:focus-within .nav-sub { display: flex; }
+}
+@media (max-width: 1080px) {
+  .nav-group { flex-wrap: wrap; }
+  .nav-group > a { flex: 1; }
+  .nav-sub-toggle { width: 44px; height: 44px; }
+  .nav-sub { width: 100%; padding: 0 0 8px 12px; border-left: 2px solid var(--line); margin-left: 4px; }
+}
+
+/* Inner pages */
+.section-tight { padding-top: 56px; }
+.section-foot { margin-top: 28px; }
+.teaser-stats { display: grid; gap: 14px; }
+.teaser-stats .result { background: var(--white); }
+.teaser-stats .result-featured { background: var(--ink); }
+.contact-copy h1 { font-size: clamp(2rem, 4vw, 2.75rem); }

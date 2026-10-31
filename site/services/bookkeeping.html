@@ -28,12 +28,26 @@
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <nav class="nav" id="site-nav" aria-label="Main">
-      <a href="/#services">Services</a>
-      <a href="/#roi">Savings calculator</a>
-      <a href="/#pricing">Pricing</a>
+      <div class="nav-group">
+        <a href="/services.html">Services</a>
+        <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="nav-services" aria-label="Show the list of services"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-sub" id="nav-services">
+          <a href="/services/bookkeeping.html" aria-current="page">Bookkeeping</a>
+          <a href="/services/admin-assistant.html">Admin assistant</a>
+          <a href="/services/ai-receptionist.html">AI receptionist</a>
+          <a href="/services/outbound-calling.html">Outbound calling</a>
+          <a href="/services/marketing-automation.html">Marketing automation</a>
+          <a href="/services/social-media.html">Social media</a>
+          <a href="/services/document-review.html">Contract &amp; document review</a>
+          <a href="/services/crm-automation.html">CRM &amp; workflow automation</a>
+          <a class="nav-sub-all" href="/services.html">All services</a>
+        </div>
+      </div>
+      <a href="/savings.html">Savings calculator</a>
+      <a href="/pricing.html">Pricing</a>
       <a href="/about.html">About</a>
       <a class="nav-phone" href="tel:+13105674398"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(310) 567-4398</a>
-      <a class="btn btn-dark" href="/#contact">Book a free assessment</a>
+      <a class="btn btn-dark" href="/contact.html">Book a free assessment</a>
     </nav>
   </div>
 </header>
@@ -42,14 +56,14 @@
 
   <section class="page-hero">
     <div class="container">
-      <p class="crumbs"><a href="/">Home</a> / <a href="/#services">Services</a> / Bookkeeping</p>
+      <p class="crumbs"><a href="/">Home</a> / <a href="/services.html">Services</a> / Bookkeeping</p>
       <p class="eyebrow">Bookkeeping</p>
       <h1>Clean books every month, without a bookkeeper on payroll.</h1>
       <p class="lead">AI does the sorting and matching in QuickBooks or Xero. A bookkeeper reviews everything before the month closes, and you get a plain-English profit and loss you can actually read.</p>
       <p class="lead"><strong>$349 a month, plus a one-time $499 setup.</strong></p>
       <div class="hero-actions">
-        <a class="btn btn-dark" href="/?interest=Bookkeeping#contact">Book a free assessment</a>
-        <a class="btn btn-light" href="/#roi">See what you’d save</a>
+        <a class="btn btn-dark" href="/contact.html?interest=Bookkeeping">Book a free assessment</a>
+        <a class="btn btn-light" href="/savings.html">See what you’d save</a>
       </div>
     </div>
   </section>
@@ -99,7 +113,7 @@
         <p>Free 30-minute assessment. No pressure, no jargon.</p>
       </div>
       <div class="cta-actions">
-        <a class="btn btn-teal" href="/?interest=Bookkeeping#contact">Book a free assessment</a>
+        <a class="btn btn-teal" href="/contact.html?interest=Bookkeeping">Book a free assessment</a>
         <a class="btn btn-outline-light" href="tel:+13105674398">Call (310) 567-4398</a>
       </div>
     </div>
