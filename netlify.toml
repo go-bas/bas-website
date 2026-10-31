@@ -1,3 +1,14 @@
-# Plain HTML site: no build command, Netlify serves the site/ folder as-is.
+# Plain HTML site: no build command. Netlify serves the site/ folder as-is and
+# runs the small functions in netlify/functions (checkout, Stripe, CRM).
 [build]
   publish = "site"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# /api/checkout and /api/stripe-webhook run the matching function.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
