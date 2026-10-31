@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing | Business Automated Systems</title>
+  <meta name="description" content="Simple monthly plans: single services from $199, Growth $899 for any 3, Full Office $1,799 for all 7. Cancel any time.">
+  <link rel="canonical" href="https://businessautomatedsystems.com/pricing">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Business Automated Systems home">
+      <img src="/assets/bas-mark.svg" alt="" width="44" height="44">
+      <span class="brand-text">
+        <span class="brand-name">BAS</span>
+        <span class="brand-tag">BUSINESS AUTOMATED SYSTEMS</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <div class="nav-group">
+        <a href="/services.html">Services</a>
+        <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="nav-services" aria-label="Show the list of services"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-sub" id="nav-services">
+          <a href="/services/bookkeeping.html">Bookkeeping</a>
+          <a href="/services/admin-assistant.html">Admin assistant</a>
+          <a href="/services/ai-receptionist.html">AI receptionist</a>
+          <a href="/services/outbound-calling.html">Outbound calling</a>
+          <a href="/services/marketing-automation.html">Marketing automation</a>
+          <a href="/services/social-media.html">Social media</a>
+          <a href="/services/document-review.html">Contract &amp; document review</a>
+          <a href="/services/crm-automation.html">CRM &amp; workflow automation</a>
+          <a class="nav-sub-all" href="/services.html">All services</a>
+        </div>
+      </div>
+      <a href="/savings.html">Savings calculator</a>
+      <a href="/pricing.html" aria-current="page">Pricing</a>
+      <a href="/about.html">About</a>
+      <a class="nav-phone" href="tel:+13105674398"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(310) 567-4398</a>
+      <a class="btn btn-dark" href="/contact.html">Book a free assessment</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Pricing</p>
+      <h1>Simple monthly plans</h1>
+      <p class="lead">Billed monthly, cancel any time. A one-time $499 setup covers connecting your accounts and a supervised first month.</p>
+    </div>
+  </section>
+  <section class="section section-tight" id="pricing">
+    <div class="container">
+      <div class="grid grid-pricing">
+        <article class="card">
+          <h3>Single service</h3>
+          <p class="price">$199–$399<span class="per"> / mo</span></p>
+          <p>Start with the one that costs you the most time. Add more whenever you’re ready.</p>
+          <a class="btn btn-light" href="start.html">Choose a service</a>
+        </article>
+        <article class="card card-featured">
+          <h3>Growth</h3>
+          <p class="price">$899<span class="per"> / mo</span></p>
+          <p>Any 3 services, such as receptionist, bookkeeping and social media.</p>
+          <a class="btn btn-teal" href="start.html?plan=growth">Start Growth</a>
+        </article>
+        <article class="card">
+          <h3>Full Office</h3>
+          <p class="price">$1,799<span class="per"> / mo</span></p>
+          <p>All 7 services working together, with one monthly report. Custom CRM and workflow projects are quoted separately.</p>
+          <a class="btn btn-light" href="start.html?plan=full">Start Full Office</a>
+        </article>
+      </div>
+      <table class="price-table">
+        <caption>Single-service prices</caption>
+        <thead><tr><th scope="col">Service</th><th scope="col">Per month</th><th scope="col">Included</th></tr></thead>
+        <tbody id="price-rows"></tbody>
+      </table>
+      <p class="calc-note">Not sure which plan fits? <a href="/contact.html">Book a free assessment</a> first. Multi-location and custom AI projects: <a href="/contact.html">let’s talk</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© <span data-year>2026</span> Business Automated Systems</span>
+    <span class="footer-links">
+      <a href="tel:+13105674398">(310) 567-4398</a>
+      <a href="mailto:robert.fox@go-bas.com">robert.fox@go-bas.com</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+    </span>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script type="module" src="/js/calculator.js"></script>
+</body>
+</html>

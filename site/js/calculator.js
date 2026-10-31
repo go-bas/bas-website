@@ -1,5 +1,5 @@
-// Homepage: the savings calculator, the single-service price table, and the
-// calculator summary sent with the assessment form. Prices come from services.js.
+// The savings calculator and the single-service price table. The calculator's
+// summary is kept for the booking form on the contact page. Prices come from services.js.
 import { SERVICES, GROWTH, FULL_OFFICE } from './services.js';
 
 const WEEKS_PER_MONTH = 4.33;
@@ -70,11 +70,14 @@ if (rows && form) {
     document.getElementById('r-roi').textContent = plan.cost ? (Math.max(0, save) / plan.cost).toFixed(1) + '×' : '0×';
 
     // Sent with the assessment form so the request arrives with the numbers.
-    const hidden = document.getElementById('f-savings');
-    if (hidden) {
-      hidden.value = chosen.length
-        ? `${chosen.join(', ')}. Staff cost ${money(staff)}/mo, BAS ${money(plan.cost)}/mo, saves ${signed(save)}/mo.`
-        : '';
+    // Kept for the booking form on the contact page, so the request arrives with the numbers.
+    const summary = chosen.length
+      ? `${chosen.join(', ')}. Staff cost ${money(staff)}/mo, BAS ${money(plan.cost)}/mo, saves ${signed(save)}/mo.`
+      : '';
+    try {
+      sessionStorage.setItem('bas-savings', summary);
+    } catch {
+      // Private browsing: the form just goes without the estimate.
     }
   };
 

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Savings calculator | Business Automated Systems</title>
+  <meta name="description" content="See what you would save by handing bookkeeping, phones, social media and admin work to Business Automated Systems.">
+  <link rel="canonical" href="https://businessautomatedsystems.com/savings">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Business Automated Systems home">
+      <img src="/assets/bas-mark.svg" alt="" width="44" height="44">
+      <span class="brand-text">
+        <span class="brand-name">BAS</span>
+        <span class="brand-tag">BUSINESS AUTOMATED SYSTEMS</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <div class="nav-group">
+        <a href="/services.html">Services</a>
+        <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="nav-services" aria-label="Show the list of services"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-sub" id="nav-services">
+          <a href="/services/bookkeeping.html">Bookkeeping</a>
+          <a href="/services/admin-assistant.html">Admin assistant</a>
+          <a href="/services/ai-receptionist.html">AI receptionist</a>
+          <a href="/services/outbound-calling.html">Outbound calling</a>
+          <a href="/services/marketing-automation.html">Marketing automation</a>
+          <a href="/services/social-media.html">Social media</a>
+          <a href="/services/document-review.html">Contract &amp; document review</a>
+          <a href="/services/crm-automation.html">CRM &amp; workflow automation</a>
+          <a class="nav-sub-all" href="/services.html">All services</a>
+        </div>
+      </div>
+      <a href="/savings.html" aria-current="page">Savings calculator</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/about.html">About</a>
+      <a class="nav-phone" href="tel:+13105674398"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(310) 567-4398</a>
+      <a class="btn btn-dark" href="/contact.html">Book a free assessment</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Savings calculator</p>
+      <h1>What would you save?</h1>
+      <p class="lead">Tick the work you’d hand to us. Enter what you pay for it now and how many hours a week it takes. Count only those hours, not a whole job.</p>
+    </div>
+  </section>
+  <section class="section section-tight" id="roi">
+    <div class="container">
+
+      <form class="calc" id="roi-form" aria-label="Savings calculator">
+        <div class="calc-head" aria-hidden="true">
+          <span>Service</span><span>Hourly wage</span><span>Hours a week</span><span>Staff cost a month</span><span>BAS price</span>
+        </div>
+        <div id="roi-rows"></div>
+        <div class="calc-settings">
+          <label for="roi-burden">Payroll taxes and benefits on top of wages</label>
+          <span class="input-affix"><input id="roi-burden" type="number" min="0" max="100" step="1" value="30" inputmode="numeric"><span>%</span></span>
+        </div>
+      </form>
+
+      <div class="results" aria-live="polite">
+        <div class="result"><span class="result-label">Staff cost today</span><span class="result-value" id="r-staff">$0</span><span class="result-note">a month</span></div>
+        <div class="result"><span class="result-label">With BAS</span><span class="result-value" id="r-bas">$0</span><span class="result-note" id="r-plan">a month</span></div>
+        <div class="result result-featured"><span class="result-label">You save</span><span class="result-value" id="r-save">$0</span><span class="result-note" id="r-year">a month</span></div>
+        <div class="result"><span class="result-label">Return</span><span class="result-value" id="r-roi">0×</span><span class="result-note">savings per $1 spent</span></div>
+      </div>
+      <p class="calc-note">Staff cost = hourly wage × hours a week × 4.33 weeks × (1 + payroll and benefits). Estimates only; your free assessment gives you a written quote. Most clients keep someone in-house to approve our work, so this counts only the hours you hand to us.</p>
+      <div class="hero-actions"><a class="btn btn-dark" href="/contact.html">Get my written savings plan</a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© <span data-year>2026</span> Business Automated Systems</span>
+    <span class="footer-links">
+      <a href="tel:+13105674398">(310) 567-4398</a>
+      <a href="mailto:robert.fox@go-bas.com">robert.fox@go-bas.com</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+    </span>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script type="module" src="/js/calculator.js"></script>
+</body>
+</html>
